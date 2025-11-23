@@ -18,14 +18,10 @@ function tabTrigger(event){
 
     const parentTab = event.currentTarget.closest(".tab");
 
-    //permet de pas s'emboruiller si on a pls tab, ça va prendre les infos de la tab la plus proche 
-    // dcp dans ce cas, au lieu de document, pour etrre encore plus precis on met prentTab.queryselector 
-
     const activeLink = document.querySelector(".tab__el--active");
     activeLink.classList.remove("tab__el--active");
 
     event.currentTarget.parentNode.classList.add("tab__el--active");
-    //ppur recup l'evenement de base qui est le click
 
     const tabActive = document.querySelector(".tab__content--active");
     tabActive.classList.remove("tab__content--active");
