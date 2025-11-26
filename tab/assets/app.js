@@ -42,6 +42,7 @@ function tabTrigger(event){
         tabContainerB.style.height = tabSelect.offsetHeight + "px";
 
     }
+    
 }
 
 

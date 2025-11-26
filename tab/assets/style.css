@@ -48,11 +48,13 @@ body{
     .tab__content {
         position: absolute;
         opacity: 0;
+        pointer-events:none;
         transition: opacity 0.2s;
     }
 
     .tab__content--active {
         opacity:1;
+        pointer-events:all;
     }
 }
 
@@ -60,16 +62,24 @@ body{
     .tab__container {
         position: relative;
         overflow: hidden;
-        transition: height 0.2s;
+        transition: height 0.3s ;
     }
 
     .tab__content {
         position: absolute;
-        opacity: 0;
-        transition: opacity 0.2s;
+        top: 0;
+        left:0;
+        transition: transform 0.3s;
     }
 
-    .tab__content--active {
-        opacity:1;
+    .tab__content--active ~ .tab__content {
+        transform: translateX(100%);
     }
+    /* option n  ~ */
+
+    :has(~.tab__content--active) {
+        transform:translateX(-100%);
+    }
+
+
 }
