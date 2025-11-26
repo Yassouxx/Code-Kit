@@ -5,23 +5,31 @@ const menuToggle = document.querySelector(".menu__toggle");
 const menu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu__el a");
 
+menu.classList.remove("menu--open");
 
 if(menuToggle){
-    menuToggle.addEventListener("click", menuOpen); 
+    //CLICK BTN
+    menuToggle.addEventListener("click", menuOpen);
 
-    for(let menuLink of menuLinks){ 
+    //click lien
+    for(let menuLink of menuLinks){
         menuLink.addEventListener("click", menuOpen);
+    }
+
+    //toggle du menu
+    function menuOpen(){
+        menu.classList.toggle("menu--open");
+        document.body.classList.toggle("no-scroll");
+        console.log("coucou");
     }
 }
 
-function menuOpen(){ 
-    menu.classList.toggle("menu--open");
-    body.classList.toggle("no-scroll");
-    console.log(body);
-}
+    
 
-var currentYear = new Date().getFullYear();
-var yearFooter = document.querySelector(".annee");
-yearFooter.textContent = currentYear
+
+
+// var currentYear = new Date().getFullYear();
+// var yearFooter = document.querySelector(".annee");
+// yearFooter.textContent = currentYear
 
 
