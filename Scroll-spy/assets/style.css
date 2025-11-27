@@ -12,21 +12,13 @@ body{
 }
 .section{
    height: 600px;
-   /*a supp*/
    margin: 50px 0;
 }
 .menu{
    position: fixed;
    left: 10px;
    top: 10px;
-   /* scroll-target-group: auto; */
-   /* ne fonctionne que ds chrome 140+ c normal pr le zigzag car c encore nouveau*/
-
 }
-
-/* .menu__el a:target-current{
-   color: red;
-}pour la methode hyper simple sans js dispo que sur chrome*/
 
 .menu__el--active a {
     color:pink;

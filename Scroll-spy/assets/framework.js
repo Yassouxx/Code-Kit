@@ -11,7 +11,6 @@ const observer = new IntersectionObserver(scrollSpy, spyOptions);
 function scrollSpy(entries, observer){
     for(let entry of entries){    
 
-  
         if(entry.isIntersecting) {
 
             const sectionId = entry.target.getAttribute("id");
