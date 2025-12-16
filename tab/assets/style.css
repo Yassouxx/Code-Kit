@@ -24,9 +24,9 @@ body{
     display: block;
 }
 
-.tab__container {
+/* .tab__container {
     background-color: rgb(250, 214, 219);
-}
+} */
 
 .tab__content {
     padding:10px;
@@ -82,4 +82,29 @@ body{
     }
 
 
+}
+
+.tab--c {
+
+    .tab__container {
+        position: relative;
+        overflow: hidden;
+        transition: height 0.3s ;
+    }
+
+    .tab__content {
+        position: absolute;
+        top: 0;
+        left:0;
+        transition: transform 0.3s;
+    }
+
+    .tab__content--active ~ .tab__content {
+        transform: translateY(100%);
+    }
+    /* option n  ~ */
+
+    :has(~.tab__content--active) {
+        transform:translateY(-100%);
+    }
 }

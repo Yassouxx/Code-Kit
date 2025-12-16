@@ -42,6 +42,15 @@ function tabTrigger(event){
         tabContainerB.style.height = tabSelect.offsetHeight + "px";
 
     }
+
+    if(parentTab.classList.contains("tab--c")){
+
+        const tabContainerC = document.querySelector(".tab--c .tab__container");
+
+        tabContainerC.style.height = tabSelect.offsetHeight + "px";
+
+    }
+    
     
 }
 
@@ -53,3 +62,7 @@ tabContainerA.style.height = activeTabA.offsetHeight + "px";
 const activeTabB = document.querySelector(".tab--b .tab__content--active");
 const tabContainerB = document.querySelector(".tab--b .tab__container");
 tabContainerB.style.height = activeTabB.offsetHeight + "px";
+
+const activeTabC = document.querySelector(".tab--c .tab__content--active");
+const tabContainerC = document.querySelector(".tab--c .tab__container");
+tabContainerB.style.height = activeTabC.offsetHeight + "px";
